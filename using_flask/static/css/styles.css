@@ -1,0 +1,43 @@
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+}
+
+.response {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.uploaded-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}

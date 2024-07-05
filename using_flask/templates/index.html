@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Gemini Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Invoice Data Extractor</h1>
+      <form method="post" enctype="multipart/form-data" id="gemini-form">
+        <div class="form-group">
+          <label for="file">Choose an image:</label>
+          <input type="file" class="form-control-file" id="file" name="file" accept=".jpg,.jpeg,.webp,.png" required>
+        </div>
+        <div class="form-group">
+            <label for="input">Ask anything related to Invoice:</label>
+            <input type="text" class="form-control" id="input" name="input" required>
+          </div>
+        <div id="image-preview" style="display: none;">
+          <h3>Uploaded Image:</h3>
+          <img id="preview-image" class="uploaded-image" src="#" alt="Selected Image">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      {% if image_path %}
+        <div id="response-image">
+          <h3>Uploaded Image:</h3>
+          <img src="{{ url_for('static', filename='uploads/' ~ image_path.split('/')[-1]) }}" class="uploaded-image">
+        </div>
+      {% endif %}
+      {% if input %}
+        <div class="response mt-4">
+          <h2>The input is :</h2>
+          <p>{{ input}}</p>
+        </div>
+      {% endif %}
+      {% if response %}
+      <div class="response mt-4">
+        <h2>The Result is :</h2>
+        <p>{{ response}}</p>
+      </div>
+    {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
