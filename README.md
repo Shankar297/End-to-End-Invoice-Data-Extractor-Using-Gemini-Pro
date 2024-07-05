@@ -4,6 +4,10 @@
 
 This project demonstrates the integration of Google's Gemini AI model with both Flask and Streamlit frameworks for extracting information from images.
 
+![Screenshot 2024-07-05 142058](https://github.com/Shankar297/End-to-End-Invoice-Data-Extractor-Using-Gemini-Pro/assets/76767335/610d4316-7be1-4f14-9fc4-f57afe0b8fa4)
+![Screenshot 2024-07-05 142126](https://github.com/Shankar297/End-to-End-Invoice-Data-Extractor-Using-Gemini-Pro/assets/76767335/f6c9e8b1-199f-4091-91ad-aa76c915c667)
+
+
 # How to run?
 ### STEPS:
 
